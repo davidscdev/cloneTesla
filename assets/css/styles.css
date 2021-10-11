@@ -1,0 +1,75 @@
+/*Fontes padrão do projeto*/
+
+@font-face {
+    font-family: GothamMedium;
+    src: url(../fonts/GothamMedium.otf);
+}
+
+@font-face {
+    font-family: GothamBook;
+    src: url(../fonts/GothamBookRegular.otf);
+}
+
+
+/*Variáveis do Projeto*/
+
+:root {
+    --header-color: #000;
+}
+
+body {
+    font-family: 'GothamMedium', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/*Estilização do HEADER*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+header .logo {
+    width: 120px;
+    margin-left: 20px;
+}
+
+header ul,
+header li {
+    list-style: none;
+}
+
+header .meio ul,
+header .ladoDireito ul {
+    display: flex;
+}
+
+header .meio li,
+header .ladoDireito li {
+    margin: 0 10px;
+}
+
+header .meio a,
+header .ladoDireito a {
+    text-decoration: none;
+    color: var(--header-color);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+header .menu--icon {
+    width: 18px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+header .menu--icon div {
+    height: 2px;
+    background-color: var(--header-color);
+}
