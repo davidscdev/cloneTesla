@@ -15,6 +15,12 @@
 
 :root {
     --header-color: #000;
+    --h1-color: #393c41;
+    --h2-color: #6E7378;
+    --btn-escuro-bg: rgba(23, 26, 32, 0.7);
+    --btn-claro-bg: rgba(255, 255, 255, 0.4);
+    --btn-escuro-color: #fff;
+    --btn-claro-color: #000;
 }
 
 body {
@@ -31,6 +37,10 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 header .logo {
@@ -72,4 +82,104 @@ header .menu--icon {
 header .menu--icon div {
     height: 2px;
     background-color: var(--header-color);
+}
+
+
+/* MAIN */
+
+main {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+main .info {
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--h1-color);
+}
+
+main h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'GothamBook', Helvetica, Arial;
+    color: var(--h2-color);
+}
+
+main h2 a {
+    color: var(--h1-color);
+}
+
+
+/*Estilização de Footer*/
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 30px;
+    right: 0;
+}
+
+footer .buttons--area {
+    display: flex;
+    justify-content: center;
+}
+
+footer .buttons--area a {
+    display: block;
+    width: 220px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 15px;
+    border-radius: 30px;
+    margin: 0 10px;
+}
+
+footer .btn--claro {
+    background-color: var(--btn-claro-bg);
+    color: var(--btn-claro-color);
+}
+
+footer .btn--escuro {
+    background-color: var(--btn-escuro-bg);
+    color: var(--btn-escuro-color);
+}
+
+footer .arrow--area {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    height: 30px;
+}
+
+@keyframes arrow {
+    0% {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: 15px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+footer .arrow--area .btn--arrow {
+    height: 15px;
+    animation-name: arrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
