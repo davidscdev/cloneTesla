@@ -183,3 +183,30 @@ footer .arrow--area .btn--arrow {
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
+
+
+/*Ajustes de Queries*/
+
+@media (max-width: 1200px) {
+    header .meio {
+        display: none;
+    }
+    header .ladoDireito li {
+        display: none;
+    }
+    header .ladoDireito li.menu {
+        display: block;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .buttons--area {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .buttons--area a {
+        margin-top: 20px;
+        width: calc(100vw - 60px);
+    }
+}
